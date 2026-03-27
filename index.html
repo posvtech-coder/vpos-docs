@@ -9,45 +9,76 @@
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       background: #f5f7fa; color: #1a1a2e; min-height: 100vh;
-      display: flex; flex-direction: column; align-items: center; justify-content: center;
-      padding: 40px 20px;
+      display: flex; flex-direction: column;
     }
-    h1 { font-size: 1.8rem; font-weight: 700; color: #0f3460; margin-bottom: 8px; }
-    p  { color: #666; font-size: 0.95rem; margin-bottom: 32px; }
-    .grid { display: flex; flex-wrap: wrap; gap: 16px; justify-content: center; }
+    header {
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 60%, #0f3460 100%);
+      color: #fff; padding: 56px 24px 48px; text-align: center;
+    }
+    .brand-mark {
+      display: inline-block; margin-bottom: 18px;
+      background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.28);
+      border-radius: 6px; padding: 5px 18px; font-size: 0.75rem;
+      letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.85);
+    }
+    header h1 { font-size: 2.6rem; font-weight: 800; letter-spacing: -1px; color: #fff; }
+    header .tagline {
+      margin-top: 10px; font-size: 1rem; color: rgba(255,255,255,0.88);
+      font-weight: 400; letter-spacing: 0.2px;
+    }
+    header .sub { margin-top: 6px; font-size: 0.85rem; color: rgba(255,255,255,0.6); }
+    main {
+      flex: 1; display: flex; flex-direction: column;
+      align-items: center; justify-content: center; padding: 56px 20px 40px;
+    }
+    .section-label { font-size: 0.78rem; letter-spacing: 2px; text-transform: uppercase; color: #0f3460; font-weight: 600; margin-bottom: 28px; }
+    .grid { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; max-width: 760px; }
     .card {
-      background: #fff; border-radius: 12px; padding: 24px 28px;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.07); text-decoration: none;
-      color: #1a1a2e; min-width: 200px; text-align: center;
-      border: 2px solid transparent; transition: border-color 0.2s, transform 0.2s;
+      background: #fff; border-radius: 14px; padding: 28px 32px;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.07); text-decoration: none;
+      color: #1a1a2e; min-width: 210px; text-align: center;
+      border: 2px solid transparent; transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
     }
-    .card:hover { border-color: #0f3460; transform: translateY(-2px); }
-    .card .icon { font-size: 2rem; margin-bottom: 10px; }
-    .card strong { display: block; font-size: 1rem; font-weight: 600; }
-    .card span { font-size: 0.82rem; color: #888; margin-top: 4px; display: block; }
-    footer { margin-top: 48px; font-size: 0.8rem; color: #aaa; }
+    .card:hover { border-color: #0f3460; transform: translateY(-4px); box-shadow: 0 8px 28px rgba(15,52,96,0.14); }
+    .card .icon { font-size: 2.2rem; margin-bottom: 14px; }
+    .card strong { display: block; font-size: 1.02rem; font-weight: 700; color: #1a1a2e; }
+    .card span { font-size: 0.83rem; color: #666; margin-top: 6px; display: block; line-height: 1.4; }
+    footer {
+      text-align: center; padding: 24px 20px; font-size: 0.82rem; color: #555;
+      border-top: 1px solid #e4e8f0; background: #fff;
+    }
+    footer strong { color: #1a1a2e; }
   </style>
 </head>
 <body>
-  <h1>VPOS Docs</h1>
-  <p>Official documents for VPOS by Value Tech Solutions</p>
-  <div class="grid">
-    <a class="card" href="legal/privacy-policy.html">
-      <div class="icon">🔐</div>
-      <strong>Privacy Policy</strong>
-      <span>Data collection &amp; your rights</span>
-    </a>
-    <a class="card" href="legal/terms-and-conditions.html">
-      <div class="icon">📄</div>
-      <strong>Terms &amp; Conditions</strong>
-      <span>Usage rules &amp; subscription terms</span>
-    </a>
-    <a class="card" href="support.html">
-      <div class="icon">🛠️</div>
-      <strong>Support</strong>
-      <span>Help &amp; contact us</span>
-    </a>
-  </div>
-  <footer>&copy; 2026 Value Tech Solutions. All rights reserved. VPOS is a product of Value Tech Solutions.</footer>
+  <header>
+    <div class="brand-mark">Value Tech Solutions</div>
+    <h1>VPOS Docs</h1>
+    <p class="tagline">VPOS &mdash; Point of Sale Platform</p>
+    <p class="sub">Official legal &amp; support documents</p>
+  </header>
+  <main>
+    <p class="section-label">Documents</p>
+    <div class="grid">
+      <a class="card" href="legal/privacy-policy.html">
+        <div class="icon">&#x1F512;</div>
+        <strong>Privacy Policy</strong>
+        <span>How we collect, store &amp; protect your data</span>
+      </a>
+      <a class="card" href="legal/terms-and-conditions.html">
+        <div class="icon">&#x1F4CB;</div>
+        <strong>Terms &amp; Conditions</strong>
+        <span>Usage rules, subscription &amp; refund policy</span>
+      </a>
+      <a class="card" href="support.html">
+        <div class="icon">&#x1F6E0;&#xFE0F;</div>
+        <strong>Customer Support</strong>
+        <span>Get help, contact us &amp; FAQs</span>
+      </a>
+    </div>
+  </main>
+  <footer>
+    &copy; 2026 <strong>Value Tech Solutions</strong>. All rights reserved. &nbsp;|&nbsp; VPOS is a registered product of Value Tech Solutions.
+  </footer>
 </body>
 </html>
