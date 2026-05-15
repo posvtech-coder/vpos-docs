@@ -1,0 +1,19 @@
+# Subdirectory repositories (tracked separately)
+vpos-admin/
+vpos-admin-react/
+vpos-billing/
+vpos-billing-offline/
+vpos-legal/
+
+# Temporary files
+temp_*.json
+*.log
+*.bak
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
