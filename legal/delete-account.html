@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Delete Account – VPOS Admin | Value Tech Solutions</title>
+  <script src="../js/contact-config.js"></script>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f5f7fa; color: #1a1a2e; line-height: 1.75; }
@@ -66,7 +67,7 @@
     <p>Follow these steps to request account deletion:</p>
     
     <ol>
-      <li><strong>Contact Support:</strong> Send an email to <a href="mailto:support@vposindia.com" style="color:#0f3460; font-weight:600;">support@vposindia.com</a></li>
+      <li><strong>Contact Support:</strong> Send an email to <a href="#" data-contact="email-delete-account" style="color:#0f3460; font-weight:600;"></a></li>
       <li><strong>Use Subject Line:</strong> "VPOS Admin Account Deletion Request"</li>
       <li><strong>Include Your Details:</strong>
         <ul style="margin-top:8px;">
@@ -81,8 +82,8 @@
 
     <div class="contact-box">
       <p><strong>Quick Contact:</strong></p>
-      <p>📧 Email: <a href="mailto:support@vposindia.com?subject=VPOS%20Admin%20Account%20Deletion%20Request">support@vposindia.com</a></p>
-      <p>📞 Phone: <a href="tel:+919019069884">090190 69884</a> (Mon-Sat, 9 AM - 6 PM IST)</p>
+      <p>📧 Email: <a href="#" data-contact="email-delete-account"></a></p>
+      <p>📞 Phone: <a href="#" data-contact="phone"></a> (<span data-contact="hours"></span>)</p>
       <p style="margin-top:12px; margin-bottom:0;">You can also call our support team to initiate the deletion process verbally. Our team will verify your identity before proceeding.</p>
     </div>
   </div>
@@ -263,7 +264,7 @@
     <h2><span class="icon">📞</span> Questions or Issues?</h2>
     <p>If you have questions about account deletion, data retention, or need assistance with the process, our support team is here to help.</p>
 
-    <a href="mailto:support@vposindia.com?subject=VPOS%20Admin%20Account%20Deletion%20Request" class="action-button">Request Account Deletion</a>
+    <a href="#" data-contact="email-delete-account" class="action-button">Request Account Deletion</a>
     <a href="../support.html" class="action-button secondary">Contact Support</a>
 
     <p style="margin-top:20px; font-size:0.88rem; color:#666;">For more information about how we handle your data, please review our <a href="privacy-policy.html" style="color:#0f3460; font-weight:600;">Privacy Policy</a> and <a href="terms-and-conditions.html" style="color:#0f3460; font-weight:600;">Terms & Conditions</a>.</p>
@@ -271,8 +272,8 @@
 </main>
 
 <footer>
-  <p>&copy; 2026 <strong>Value Tech Solutions</strong>. All rights reserved.</p>
-  <p style="margin-top:8px;">VPOS is a product of Value Tech Solutions, designed for Indian retail businesses.</p>
+  <p>&copy; 2026 <strong data-contact="company"></strong>. All rights reserved.</p>
+  <p style="margin-top:8px;">VPOS is a product of <span data-contact="company"></span>, designed for Indian retail businesses.</p>
   <p style="margin-top:8px;">
     <a href="privacy-policy.html" style="color:#0f3460; text-decoration:none; margin:0 8px;">Privacy Policy</a> |
     <a href="terms-and-conditions.html" style="color:#0f3460; text-decoration:none; margin:0 8px;">Terms & Conditions</a> |
