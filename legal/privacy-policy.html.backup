@@ -289,22 +289,23 @@
     <h2><span class="icon">🔐</span> Your Rights</h2>
     <p>You have the right to:</p>
     <ul>
-      <li><strong>Access Your Data:</strong> Request a copy of your information at any time</li>
-      <li><strong>Correct Data:</strong> Update your business information, inventory, and staff details directly in the app</li>
-      <li><strong>Delete Your Account:</strong> Request account deletion via app settings (15-day grace period applies)</li>
-      <li><strong>Export Your Data:</strong> Request a downloadable copy of all your business data</li>
-      <li><strong>Cancel Subscription:</strong> Delete your account to cancel your subscription at any time</li>
+      <li><strong>Access Your Data:</strong> Request a copy of your business information and transaction records</li>
+      <li><strong>Update Your Information:</strong> Edit your business profile, inventory, staff details, and branch information directly in the VPOS app</li>
+      <li><strong>Request Account Deletion:</strong> Contact our support team to request permanent account deletion (subject to 15-day review period and legal retention requirements)</li>
+      <li><strong>Export Your Data:</strong> Request a downloadable copy of your business data for your records</li>
+      <li><strong>Cancel Your Subscription:</strong> Contact support to cancel your subscription or request account closure</li>
     </ul>
     
     <p><strong>How to Exercise Your Rights:</strong></p>
     <ul>
-      <li><strong>Self-Service:</strong> Most data corrections and account deletion can be done directly in the VPOS app</li>
-      <li><strong>Support Requests:</strong> For data access, export, or subscription plan changes, contact us at <strong>support@vposindia.com</strong> or call <strong>090190 69884</strong></li>
-      <li><strong>Response Time:</strong> We respond to data requests within 30 days as required by Indian law</li>
+      <li><strong>Update Information:</strong> You can edit your business details, inventory, and staff information directly in the VPOS app anytime</li>
+      <li><strong>Data Requests:</strong> To access, export, or delete your data, contact our support team at <strong>support@vposindia.com</strong> or call <strong>090190 69884</strong></li>
+      <li><strong>Subscription Changes:</strong> For subscription upgrades, downgrades, or cancellations, contact our support team</li>
+      <li><strong>Response Time:</strong> We process all data requests within 30 days as required by Indian law</li>
     </ul>
     
     <div class="info-box">
-      <strong>Note:</strong> Some data (anonymized transaction records) must be retained for 6 years to comply with GST Act 2017 and Income Tax Act 1961, even after account deletion. All personally identifiable customer information is permanently deleted immediately.
+      <strong>Important:</strong> After account deletion, anonymized transaction records are retained for 6 years to comply with GST Act 2017 Section 36 and Income Tax Act 1961 Section 44AA. All customer names, phone numbers, and personally identifiable information are permanently removed immediately. Only transaction amounts, dates, and product details are retained for tax compliance.
     </div>
   </div>
 
