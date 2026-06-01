@@ -14,6 +14,7 @@ Implemented complete transaction retention period system with:
 - ✅ **Financial Year basis** calculation (NOT transaction date)
 - ✅ Dual-layer validation (UI + Cloud Functions)
 - ✅ Bills backup with customer data anonymization on account deletion
+- ✅ **Automated cleanup of deleted shopkeeper bills** after retention expires
 - ✅ Legal compliance documentation
 
 ---
@@ -220,12 +221,34 @@ deleted_shopkeepers/{shopkeeperId}/
 
 ## 🎯 Retention Periods by Scenario
 
-| Scenario | Retention Start | Retention Period | Example Delete Date |
-|----------|----------------|------------------|---------------------|
-| **Active Branch** | FY End of transaction | 2,193 days (6y + 3d) | Bill May 2020 → FY 2020-21 ends Mar 31, 2021 → Delete after Mar 31, 2027 |
-| **Deleted Shopkeeper (< 6 years)** | FY End of transaction | 2,193 days (6y + 3d) | Bills backed up to deleted_shopkeepers with anonymized customer data |
-| **Deleted Shopkeeper (> 6 years)** | FY End of transaction | Expired | Bills NOT backed up (permanently deleted immediately) |
-| **Custom Retention (Premium)** | FY End of transaction | Admin-set (6-10 years) | Bills May 2020 with 10y retention → Delete after Mar 31, 2031 |
+| Scenario | Retention Start | Retention Period | Example Delete Date | Auto-Cleanup |
+|----------|----------------|------------------|---------------------|--------------|
+| **Active Branch** | FY End of transaction | 2,193 days (6y + 3d) | Bill May 2020 → FY 2020-21 ends Mar 31, 2021 → Delete after Mar 31, 2027 | ✅ Daily 3:00 AM IST |
+| **Deleted Shopkeeper (< retention)** | FY End of transaction | Branch's retention days | Bills backed up to deleted_shopkeepers with anonymized customer data | ✅ Daily 3:30 AM IST |
+| **Deleted Shopkeeper (> retention)** | FY End of transaction | Expired | Bills NOT backed up (permanently deleted immediately during shopkeeper deletion) | N/A |
+| **Custom Retention (Premium)** | FY End of transaction | Admin-set (6-10 years) | Bills May 2020 with 10y retention → Delete after Mar 31, 2031 | ✅ Daily 3:00 AM IST (active) or 3:30 AM IST (deleted) |
+
+### 📌 Detailed Example: 8-Year Retention with Shopkeeper Deletion
+
+**Scenario:** Retention set to 8 years (2,920 days), shopkeeper deleted after 1 year
+
+```
+Timeline:
+- Jan 2020: Bills created (FY 2019-20 and FY 2020-21)
+- Jan 2021: Shopkeeper deleted (after 1 year)
+- Feb 2021: After 30-day grace period, bills backed up to deleted_shopkeepers
+  └─ Bills from Jan-Mar 2020 (FY 2019-20) → Backed up with anonymized data
+  └─ Bills from Apr 2020-Jan 2021 (FY 2020-21) → Backed up with anonymized data
+
+Automatic Cleanup (Daily 3:30 AM IST):
+- Mar 31, 2028: FY 2019-20 bills expire (8 years after FY end Mar 31, 2020)
+  └─ processDeletedShopkeeperRetention deletes these bills
+- Mar 31, 2029: FY 2020-21 bills expire (8 years after FY end Mar 31, 2021)
+  └─ processDeletedShopkeeperRetention deletes these bills
+- After all bills deleted: Branch and shopkeeper documents auto-deleted
+
+Answer: Bills kept for 7-8 years after deletion (depending on FY), then auto-cleaned
+```
 
 ---
 
@@ -331,8 +354,9 @@ Calculation example:
 
 | Function | Schedule | Purpose | FY Calculation |
 |----------|----------|---------|----------------|
-| `processTransactionRetention` | Daily 3:00 AM IST | Delete expired bills | ✅ Uses FY end |
 | `processScheduledTasks` | Daily 2:00 AM IST | Process shopkeeper deletions | ✅ Uses FY end for bill backup |
+| `processTransactionRetention` | Daily 3:00 AM IST | Delete expired bills from active shopkeepers | ✅ Uses FY end |
+| `processDeletedShopkeeperRetention` | Daily 3:30 AM IST | Delete expired bills from deleted shopkeepers | ✅ Uses FY end |
 | `processEmailTasks` | Daily 8:00 AM IST | Send email reports | N/A |
 | `processCleanupTasks` | Daily 2:00 AM IST | General cleanup | N/A |
 
