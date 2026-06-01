@@ -22,6 +22,7 @@
     ul li { margin-bottom: 6px; }
     .highlight-box { background: #f0f4ff; border-left: 4px solid #0f3460; border-radius: 6px; padding: 14px 18px; margin-bottom: 14px; font-size: 0.93rem; color: #1a1a2e; }
     .info-box { background: #f0fdf4; border-left: 4px solid #10b981; border-radius: 6px; padding: 14px 18px; margin-bottom: 14px; font-size: 0.93rem; color: #1a1a2e; }
+    .warning-box { background: #fff8f0; border-left: 4px solid #e67e22; border-radius: 6px; padding: 14px 18px; margin-bottom: 14px; font-size: 0.93rem; color: #1a1a2e; }
     .contact-box { background: linear-gradient(135deg, #0f3460, #16213e); color: #fff; border-radius: 10px; padding: 24px 28px; margin-top: 10px; }
     .contact-box p { color: rgba(255,255,255,0.92); margin-bottom: 6px; font-size: 0.93rem; }
     .contact-box a { color: #90caf9; text-decoration: none; }
@@ -56,7 +57,7 @@
   <div class="card" style="margin-top:20px;">
     <h2><span class="icon">📋</span> Overview</h2>
     <div class="highlight-box">
-      VPOS is a point-of-sale management system for supermarkets and retail stores in India. You can register using your mobile number and immediately start managing your business operations.
+      VPOS is a cloud-based point-of-sale management system for supermarkets and retail stores in India. You can try VPOS with a trial account or get onboarded by our team for full access. Billing devices are provided by Value Tech Solutions and assigned to your branches based on your subscription plan.
     </div>
     <p>This Privacy Policy explains what information we collect, how we use it, and how we protect it. By using VPOS, you agree to this policy.</p>
     <p><strong>Last Updated:</strong> June 1, 2026</p>
@@ -76,7 +77,7 @@
   <div class="card">
     <h2><span class="icon">🗂️</span> What Information We Collect</h2>
 
-    <h3>When You Register Your Account</h3>
+    <h3>During Account Registration</h3>
     <ul>
       <li>Mobile phone number (verified with OTP)</li>
       <li>Full name and email address</li>
@@ -84,46 +85,58 @@
       <li>GST number (optional)</li>
       <li>Alternative contact number (optional)</li>
       <li>Profile photo (optional)</li>
+      <li>Account type (trial or full subscription)</li>
     </ul>
 
     <h3>When You Set Up Your Business</h3>
     <ul>
       <li><strong>Branch Information:</strong> Branch name, address, contact details, GST settings</li>
-      <li><strong>Manager Accounts:</strong> Names and contact information of managers you assign to your branches</li>
-      <li><strong>Staff Information:</strong> Employee names, IDs, and login credentials for your billing devices</li>
-      <li><strong>Product Information:</strong> Product names, prices, categories, images (optional)</li>
+      <li><strong>Manager Accounts:</strong> Names and contact information of managers you assign to your branches (full subscription only)</li>
+      <li><strong>Staff Information:</strong> Employee names, IDs, and login credentials for billing devices</li>
+      <li><strong>Product Information:</strong> Product names, prices, categories, images (based on subscription features)</li>
+      <li><strong>Subscription Details:</strong> Plan type, features enabled, billing device allocation, feature limits</li>
+    </ul>
+
+    <h3>Billing Device Information</h3>
+    <ul>
+      <li>Device serial numbers and identifiers</li>
+      <li>Device assignment to branches</li>
+      <li>Device model and operating system information</li>
+      <li>Sync status (cloud-connected or standalone mode)</li>
+      <li>Device registration and activation history</li>
     </ul>
 
     <h3>During Your Business Operations</h3>
     <ul>
-      <li>Sales transactions and billing records</li>
+      <li>Sales transactions and billing records from your billing devices</li>
       <li>Inventory changes and stock movements</li>
       <li>Reports and analytics you generate</li>
-      <li>Device information (device model, operating system)</li>
+      <li>Device usage logs and sync history</li>
       <li>App usage logs for troubleshooting</li>
     </ul>
 
     <h3>Customer Information (Optional)</h3>
     <div class="highlight-box">
-      <strong>Important:</strong> Collecting customer information during billing is optional and requires customer consent. You are responsible for obtaining permission before collecting any customer data. Value Tech Solutions is not liable for unauthorized data collection.
+      <strong>Important:</strong> Collecting customer information during billing is entirely optional and requires customer consent. You are responsible for obtaining permission before collecting any customer data. Value Tech Solutions is not liable for unauthorized data collection.
     </div>
 
     <h3>System Information</h3>
     <ul>
       <li>Login history and access times</li>
       <li>Account changes and modifications</li>
-      <li>Device registration and assignments</li>
+      <li>Subscription changes and billing history</li>
+      <li>Feature usage and limit tracking</li>
       <li>Error logs for technical support</li>
     </ul>
   </div>
 
   <div class="card">
     <h2><span class="icon">📷</span> App Permissions</h2>
-    <p>VPOS may request the following permissions:</p>
+    <p>VPOS applications may request the following permissions:</p>
     <div class="permission-grid">
       <div class="permission-item">
         <strong>📷 Camera</strong>
-        <span>To scan QR codes for device registration and capture product photos.</span>
+        <span>To scan QR codes for device registration and capture product photos (if enabled in your subscription).</span>
       </div>
       <div class="permission-item">
         <strong>🖼️ Storage</strong>
@@ -131,23 +144,30 @@
       </div>
       <div class="permission-item">
         <strong>🔔 Notifications</strong>
-        <span>To send alerts about sales, system updates, and important messages.</span>
+        <span>To send alerts about sales, subscription status, device events, and important messages.</span>
       </div>
       <div class="permission-item">
         <strong>🌐 Internet</strong>
-        <span>To sync data and access cloud services. Works offline when internet is unavailable.</span>
+        <span>To sync data with cloud services. Cloud-connected devices sync transactions automatically; standalone devices operate without internet.</span>
+      </div>
+      <div class="permission-item">
+        <strong>📡 Local Network</strong>
+        <span>For standalone mode devices to communicate with each other on your local network.</span>
       </div>
     </div>
-    <p>You can deny permissions, but some features may not work. Billing devices can operate offline.</p>
+    <p>You can deny permissions, but some features may not work. Billing devices can operate offline and sync when internet is available.</p>
   </div>
 
   <div class="card">
     <h2><span class="icon">⚙️</span> How We Use Your Information</h2>
     <ul>
       <li>To provide and operate the VPOS platform</li>
-      <li>To manage your account, branches, and staff</li>
+      <li>To manage your account, subscription plan, and feature access</li>
+      <li>To provision and assign billing devices to your branches</li>
+      <li>To manage branches, managers, and staff accounts</li>
       <li>To process billing transactions and generate reports</li>
-      <li>To send important notifications and system alerts</li>
+      <li>To track subscription usage and enforce feature limits</li>
+      <li>To send important notifications, subscription reminders, and system alerts</li>
       <li>To provide technical support and troubleshoot issues</li>
       <li>To improve our services and user experience</li>
       <li>To comply with Indian tax and business regulations</li>
@@ -160,13 +180,14 @@
     <h2><span class="icon">☁️</span> Data Storage &amp; Security</h2>
     
     <h3>Where Your Data is Stored</h3>
-    <p>All data is stored on secure cloud servers located in India (Mumbai region) to comply with Indian data localization laws.</p>
+    <p>All cloud-connected data is stored on secure servers located in India (Mumbai region) to comply with Indian data localization laws. Standalone mode devices store data locally on the device and your local network only.</p>
 
     <h3>Security Measures</h3>
     <ul>
       <li><strong>Encryption:</strong> All data is encrypted during transmission and storage</li>
-      <li><strong>Access Control:</strong> You and your authorized managers can access your business data</li>
+      <li><strong>Access Control:</strong> You and your authorized managers can access your business data based on assigned permissions</li>
       <li><strong>Data Isolation:</strong> Your business data is completely separated from other users</li>
+      <li><strong>Device Security:</strong> Billing devices use secure authentication for device-to-cloud communication</li>
       <li><strong>Regular Monitoring:</strong> System logs track all access and changes</li>
       <li><strong>Security Audits:</strong> Regular checks for vulnerabilities</li>
       <li><strong>Two-Factor Authentication:</strong> Available for enhanced account security</li>
@@ -175,9 +196,15 @@
     <h3>Who Can Access Your Data</h3>
     <ul>
       <li><strong>You:</strong> Full access to your business data</li>
-      <li><strong>Your Managers:</strong> Access only to branches you assign them</li>
+      <li><strong>Your Managers:</strong> Access only to branches you assign them (full subscription only)</li>
+      <li><strong>Your Staff:</strong> Limited access to billing functions on assigned devices</li>
       <li><strong>Support Team:</strong> Limited access for technical support when you request help</li>
     </ul>
+
+    <h3>Standalone Mode Data</h3>
+    <div class="info-box">
+      Standalone mode devices do NOT sync data to the cloud. All data remains on your local devices and network. You are solely responsible for data backup and security in standalone mode.
+    </div>
   </div>
 
   <div class="card">
@@ -197,7 +224,7 @@
           <td>To provide services</td>
         </tr>
         <tr>
-          <td>Inactive Accounts</td>
+          <td>Inactive/Deactivated Accounts</td>
           <td>90 days after deactivation</td>
           <td>Allow time to reactivate</td>
         </tr>
@@ -213,19 +240,29 @@
         </tr>
         <tr>
           <td>Product Images</td>
-          <td>90 days after disabling</td>
-          <td>Allow time to re-enable feature</td>
+          <td>Based on your subscription retention settings (0-90 days after disabling)</td>
+          <td>Configurable per plan</td>
         </tr>
         <tr>
-          <td>System Logs</td>
+          <td>System Logs &amp; Audit Trails</td>
           <td>90 days</td>
           <td>Troubleshooting and security</td>
+        </tr>
+        <tr>
+          <td>Subscription &amp; Billing History</td>
+          <td>7 years</td>
+          <td>Financial compliance</td>
+        </tr>
+        <tr>
+          <td>Device Assignment History</td>
+          <td>Duration of subscription + 90 days</td>
+          <td>Support and tracking</td>
         </tr>
       </tbody>
     </table>
 
     <div class="info-box">
-      <strong>Need Different Retention?</strong> Contact our support team at <strong>support@vposindia.com</strong> or call <strong>090190 69884</strong> to discuss custom retention periods for your business needs.
+      <strong>Custom Retention Periods:</strong> Depending on your subscription plan, you may have custom retention periods for certain data types. Contact our support team at <strong>support@vposindia.com</strong> or call <strong>090190 69884</strong> for details.
     </div>
   </div>
 
@@ -239,6 +276,7 @@
       <li><strong>Export Data:</strong> Download your data in a portable format</li>
       <li><strong>Restrict Processing:</strong> Limit how we use your data</li>
       <li><strong>Object:</strong> Decline certain uses of your information</li>
+      <li><strong>Subscription Control:</strong> Upgrade, downgrade, or cancel your subscription</li>
     </ul>
     <p>To exercise these rights, contact us at <strong>support@vposindia.com</strong> or call <strong>090190 69884</strong>.</p>
   </div>
@@ -247,9 +285,10 @@
     <h2><span class="icon">🌐</span> Third-Party Services</h2>
     <p>VPOS uses trusted third-party services:</p>
     <ul>
-      <li><strong>Cloud Services:</strong> For secure data storage and backup</li>
+      <li><strong>Cloud Services:</strong> For secure data storage and backup (cloud-connected mode only)</li>
       <li><strong>SMS Services:</strong> For OTP delivery during login</li>
-      <li><strong>Payment Services:</strong> For secure payment processing (if applicable)</li>
+      <li><strong>Email Services:</strong> For subscription notifications and support (if enabled in your plan)</li>
+      <li><strong>Payment Services:</strong> For secure subscription payment processing</li>
     </ul>
     <p>All partners comply with Indian data protection laws and maintain high security standards.</p>
   </div>
@@ -262,7 +301,7 @@
       <li><strong>IT Security Rules, 2011</strong> &mdash; Security practices and procedures</li>
       <li><strong>Consumer Protection Act, 2019</strong> &mdash; Consumer rights and data handling</li>
       <li><strong>GST Act, 2017</strong> &mdash; Transaction record retention (7 years)</li>
-      <li><strong>Data Localization</strong> &mdash; All data stored within India</li>
+      <li><strong>Data Localization</strong> &mdash; All cloud data stored within India</li>
     </ul>
   </div>
 
@@ -272,7 +311,7 @@
     <ul>
       <li>Update the "Effective Date" at the top</li>
       <li>Notify you through the app</li>
-      <li>Send an email to your registered address</li>
+      <li>Send an email to your registered address (if email service is enabled)</li>
       <li>Show a notification on the login screen</li>
     </ul>
     <p>Continued use of VPOS means you accept any changes made to this policy.</p>
