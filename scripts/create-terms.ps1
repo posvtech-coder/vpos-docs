@@ -1,4 +1,7 @@
-﻿<!DOCTYPE html>
+# This script creates the comprehensive Terms & Conditions HTML document
+
+$content = @'
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -403,3 +406,10 @@
 
 </body>
 </html>
+'@
+
+# Write the content to the file
+$outputPath = "c:\GitHub\VPOS\legal\terms-and-conditions.html"
+[System.IO.File]::WriteAllText($outputPath, $content, [System.Text.Encoding]::UTF8)
+
+Write-Host "✅ Terms & Conditions HTML file created successfully at: $outputPath" -ForegroundColor Green

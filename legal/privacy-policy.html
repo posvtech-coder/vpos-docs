@@ -16,23 +16,29 @@
     .card { background: #fff; border-radius: 12px; padding: 36px 40px; margin-bottom: 20px; box-shadow: 0 2px 12px rgba(0,0,0,0.06); }
     h2 { font-size: 1.15rem; font-weight: 700; color: #0f3460; margin-bottom: 14px; padding-bottom: 10px; border-bottom: 2px solid #e8edf5; display: flex; align-items: center; gap: 10px; }
     h2 .icon { font-size: 1.25rem; }
+    h3 { font-size: 1rem; font-weight: 600; color: #16213e; margin: 18px 0 10px 0; }
     p { margin-bottom: 12px; color: #444; font-size: 0.95rem; }
     ul { padding-left: 20px; margin-bottom: 12px; color: #444; font-size: 0.95rem; }
     ul li { margin-bottom: 6px; }
     .highlight-box { background: #f0f4ff; border-left: 4px solid #0f3460; border-radius: 6px; padding: 14px 18px; margin-bottom: 14px; font-size: 0.93rem; color: #1a1a2e; }
-    .permission-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 12px 0; }
-    @media (max-width: 560px) { .permission-grid { grid-template-columns: 1fr; } .card { padding: 24px 20px; } }
-    .permission-item { background: #f8faff; border: 1px solid #dde5f5; border-radius: 8px; padding: 12px 16px; }
-    .permission-item strong { display: block; font-size: 0.88rem; color: #0f3460; margin-bottom: 4px; }
-    .permission-item span { font-size: 0.83rem; color: #666; }
+    .info-box { background: #f0fdf4; border-left: 4px solid #10b981; border-radius: 6px; padding: 14px 18px; margin-bottom: 14px; font-size: 0.93rem; color: #1a1a2e; }
     .contact-box { background: linear-gradient(135deg, #0f3460, #16213e); color: #fff; border-radius: 10px; padding: 24px 28px; margin-top: 10px; }
     .contact-box p { color: rgba(255,255,255,0.92); margin-bottom: 6px; font-size: 0.93rem; }
     .contact-box a { color: #90caf9; text-decoration: none; }
     .contact-box a:hover { text-decoration: underline; }
+    .permission-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 12px 0; }
+    .permission-item { background: #f8faff; border: 1px solid #dde5f5; border-radius: 8px; padding: 12px 16px; }
+    .permission-item strong { display: block; font-size: 0.88rem; color: #0f3460; margin-bottom: 4px; }
+    .permission-item span { font-size: 0.83rem; color: #666; }
+    .retention-table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 0.9rem; }
+    .retention-table th { background: #f0f4ff; color: #0f3460; padding: 12px; text-align: left; font-weight: 600; border: 1px solid #e0e7f5; }
+    .retention-table td { padding: 10px 12px; border: 1px solid #e0e7f5; }
+    .retention-table tr:nth-child(even) { background: #f9fafb; }
     footer { text-align: center; padding: 24px 20px; font-size: 0.82rem; color: #555; border-top: 1px solid #e4e8f0; background: #fff; }
     footer strong { color: #1a1a2e; }
     a.back { display: inline-block; margin: 24px 0 0 0; color: #0f3460; font-size: 0.9rem; text-decoration: none; font-weight: 500; }
     a.back:hover { text-decoration: underline; }
+    @media (max-width: 560px) { .card { padding: 24px 20px; } .permission-grid { grid-template-columns: 1fr; } .retention-table { font-size: 0.85rem; } .retention-table th, .retention-table td { padding: 8px; } }
   </style>
 </head>
 <body>
@@ -41,7 +47,7 @@
   <div class="brand-mark">Value Tech Solutions</div>
   <h1>&#x1F512; Privacy Policy</h1>
   <p>VPOS &mdash; A Product of Value Tech Solutions</p>
-  <span class="badge">Effective Date: March 27, 2026</span>
+  <span class="badge">Effective Date: June 1, 2026</span>
 </header>
 
 <main>
@@ -50,10 +56,10 @@
   <div class="card" style="margin-top:20px;">
     <h2><span class="icon">📋</span> Overview</h2>
     <div class="highlight-box">
-      VPOS is a <strong>closed, business-only</strong> Point of Sale management system developed by Value Tech Solutions for supermarkets and retail stores. Access is strictly by invitation — all accounts are created by the Value Tech Solutions team. There is no public self-registration.
+      VPOS is a <strong>closed, business-only</strong> Point of Sale management system developed by Value Tech Solutions for supermarkets and retail stores in India. Access is strictly by invitation — all accounts are created by the Value Tech Solutions team. There is no public self-registration.
     </div>
     <p>This Privacy Policy describes what information VPOS collects, how it is used, stored, and protected. By using any VPOS application (Admin, Billing, or Billing Offline), you agree to the practices described in this policy.</p>
-    <p><strong>Last Updated:</strong> March 27, 2026</p>
+    <p><strong>Last Updated:</strong> June 1, 2026</p>
   </div>
 
   <div class="card">
@@ -62,124 +68,330 @@
     <ul>
       <li><strong>Address:</strong> 4th Floor, RJ Complex, SH 35, Varthur – Sarjapur Rd, Yamare Village, Sompura, Bengaluru, Karnataka 562125</li>
       <li><strong>Phone:</strong> 090190 69884</li>
-      <li><strong>Email:</strong> <a href="mailto:support@vposindia.com">support@vposindia.com</a></li>
-      <li><strong>Website:</strong> <a href="https://vposindia.com">vposindia.com</a></li>
+      <li><strong>Email:</strong> support@vposindia.com</li>
+      <li><strong>Website:</strong> vposindia.com</li>
     </ul>
   </div>
 
   <div class="card">
     <h2><span class="icon">🗂️</span> Information We Collect</h2>
 
-    <p><strong>Shopkeeper / Business Account Information</strong></p>
-    <p>Collected during onboarding by our team:</p>
+    <h3>Shopkeeper / Business Account Information</h3>
+    <p>Collected during onboarding by our support team:</p>
     <ul>
       <li>Full name, email address, mobile phone number</li>
       <li>Business name and branch address(es)</li>
-      <li>Aadhaar ID number (optional — collected solely for identity verification purposes and stored securely)</li>
+      <li>Aadhaar ID number (optional — collected solely for identity verification purposes and stored securely with restricted access)</li>
+      <li>GST number (optional — for tax compliance)</li>
+      <li>Customer type (retail/wholesale/distributor)</li>
     </ul>
 
-    <p><strong>Branch &amp; Staff Information</strong></p>
+    <h3>Branch &amp; Staff Information</h3>
     <ul>
       <li>Branch names, addresses, and configuration settings</li>
       <li>Manager accounts: name, email, phone, assigned branches</li>
+      <li>Service agent accounts: name, email, phone, permissions</li>
       <li>Billing device identifiers and registration details</li>
     </ul>
 
-    <p><strong>Inventory &amp; Business Data</strong></p>
+    <h3>Inventory &amp; Business Data</h3>
     <ul>
-      <li>Product names, prices, categories, GST slabs, and images</li>
+      <li>Product names, prices, categories, GST slabs</li>
+      <li>Product images (optional — can be disabled per branch)</li>
       <li>Sales transactions, bill records, and payment details</li>
       <li>Subscription plan details and device count</li>
+      <li>Reports and analytics data</li>
     </ul>
 
-    <p><strong>Customer Billing Data (Optional &amp; Consent-Based)</strong></p>
+    <h3>Customer Billing Data (Optional &amp; Consent-Based)</h3>
     <div class="highlight-box">
-      Collection of end-customer information during billing is entirely optional. Shopkeepers may collect customer name and phone number only with the explicit consent of the customer. Value Tech Solutions does not mandate collection of customer data.
+      Collection of end-customer information during billing is entirely optional. Shopkeepers may collect customer name and phone number only with the explicit consent of the customer. Value Tech Solutions does not mandate collection of customer data and bears no liability for unauthorized collection.
     </div>
 
-    <p><strong>Device &amp; Technical Data</strong></p>
+    <h3>Device &amp; Technical Data</h3>
     <ul>
-      <li>Device model, Android version, and unique device identifier</li>
-      <li>Firebase installation ID and push notification token</li>
+      <li>Device model, manufacturer, Android/iOS version</li>
+      <li>Unique device identifier (Firebase installation ID)</li>
+      <li>Push notification token (Firebase Cloud Messaging)</li>
+      <li>App version and platform information</li>
       <li>App crash logs and error diagnostics</li>
+      <li>Device registration and assignment history</li>
+    </ul>
+
+    <h3>Activity &amp; Audit Logs</h3>
+    <ul>
+      <li>User login history and timestamps</li>
+      <li>Account creation, modification, and deletion activities</li>
+      <li>Device scan and QR code scanning logs</li>
+      <li>Inventory and category modifications</li>
+      <li>Report generation and export activities</li>
+      <li><strong>Retention:</strong> 90 days for audit logs, 90 days for activity logs</li>
     </ul>
   </div>
 
   <div class="card">
     <h2><span class="icon">📷</span> App Permissions</h2>
-    <p>The following device permissions may be requested:</p>
+    <p>The following device permissions may be requested by VPOS applications:</p>
     <div class="permission-grid">
       <div class="permission-item">
         <strong>📷 Camera</strong>
-        <span>Used by administrators and staff to register billing devices (QR scanning), and by shopkeepers and managers to add product images to inventory.</span>
+        <span>Used by administrators and shopkeepers to scan device QR codes for registration and to capture product images for inventory management.</span>
       </div>
       <div class="permission-item">
         <strong>🖼️ Storage / Media</strong>
-        <span>Accessing device storage to upload product images and import/export inventory and report files.</span>
+        <span>Accessing device storage to upload product images, export inventory data, and save sales reports locally.</span>
       </div>
       <div class="permission-item">
         <strong>🔔 Notifications</strong>
-        <span>Receiving real-time alerts for sales activity, device events, and subscription status.</span>
+        <span>Receiving real-time alerts for sales activity, device events, subscription status, and system notifications.</span>
       </div>
       <div class="permission-item">
         <strong>🌐 Internet</strong>
-        <span>Syncing data with Firebase cloud services and communicating with VPOS backend systems.</span>
+        <span>Syncing data with Firebase cloud services and communicating with VPOS backend systems. Offline mode available when internet is unavailable.</span>
       </div>
     </div>
-    <p>You may deny any permission; however, the corresponding features will be unavailable.</p>
+    <p>You may deny any permission; however, the corresponding features will be unavailable. VPOS Billing apps can operate in offline mode if internet access is denied.</p>
   </div>
 
   <div class="card">
     <h2><span class="icon">⚙️</span> How We Use Your Information</h2>
     <ul>
       <li>To provide, operate, and maintain the VPOS platform</li>
-      <li>To manage shopkeeper accounts, branches, staff, and billing devices</li>
+      <li>To manage shopkeeper accounts, branches, staff (managers), and billing devices</li>
       <li>To process and record sales transactions and generate reports</li>
-      <li>To send important system and subscription notifications</li>
+      <li>To send important system notifications, subscription reminders, and security alerts</li>
       <li>To diagnose technical issues and improve application performance</li>
-      <li>To verify business identity and comply with applicable regulations</li>
+      <li>To verify business identity and comply with applicable Indian regulations</li>
+      <li>To provide customer support and respond to inquiries</li>
+      <li>To enforce our Terms & Conditions and prevent fraudulent activity</li>
     </ul>
     <p>We do <strong>not</strong> sell, rent, or share your personal information with third parties for marketing purposes.</p>
   </div>
 
   <div class="card">
     <h2><span class="icon">☁️</span> Data Storage &amp; Security</h2>
-    <p>All data is stored on <strong>Google Firebase</strong> (Cloud Firestore and Firebase Storage), hosted on Google's secure cloud infrastructure. Data is encrypted in transit (TLS) and at rest.</p>
-    <p>Access to data is controlled by Firebase Authentication with role-based custom security claims. Each shopkeeper can only access their own data. Firestore security rules enforce isolation between accounts.</p>
-    <p>Aadhaar ID numbers, where optionally provided, are stored in a restricted Firestore collection accessible only to authorised administrators.</p>
-  </div>
+    
+    <h3>Cloud Infrastructure</h3>
+    <p>All data is stored on <strong>Google Firebase</strong> (Cloud Firestore and Firebase Storage), hosted on Google's secure cloud infrastructure in the <strong>asia-south1 (Mumbai, India)</strong> region. This ensures data sovereignty and compliance with Indian data localization requirements.</p>
 
-  <div class="card">
-    <h2><span class="icon">🔄</span> Data Retention</h2>
+    <h3>Encryption</h3>
     <ul>
-      <li>Active account data is retained for as long as the account is active</li>
-      <li>Sales and billing records are retained for a minimum of 3 years to comply with business and tax record requirements</li>
-      <li>When an account is deactivated, data is retained for 90 days before permanent deletion unless legal obligations require longer retention</li>
+      <li><strong>In Transit:</strong> All data transmitted between apps and servers is encrypted using TLS/SSL</li>
+      <li><strong>At Rest:</strong> Data stored in Firestore and Firebase Storage is encrypted at rest using AES-256 encryption</li>
+      <li><strong>QR Codes:</strong> Device QR codes use AES-256-CBC encryption for secure device registration</li>
+    </ul>
+
+    <h3>Access Control</h3>
+    <ul>
+      <li>Firebase Authentication with role-based custom security claims (Admin, Service Agent, Shopkeeper, Manager)</li>
+      <li>Each shopkeeper can only access their own data — strict data isolation enforced by Firestore security rules</li>
+      <li>Service agents have limited read access for support purposes only</li>
+      <li>Managers can only access data from their assigned branches</li>
+      <li>Aadhaar ID numbers, where optionally provided, are stored in a restricted Firestore collection accessible only to authorized administrators</li>
+    </ul>
+
+    <h3>Security Measures</h3>
+    <ul>
+      <li>Firebase App Check to prevent unauthorized API access</li>
+      <li>Firestore Security Rules to enforce role-based access control</li>
+      <li>Regular security audits and vulnerability assessments</li>
+      <li>Audit logs for tracking sensitive operations</li>
+      <li>Two-factor authentication (2FA) available for admin accounts</li>
     </ul>
   </div>
 
   <div class="card">
+    <h2><span class="icon">🔄</span> Data Retention</h2>
+    <p>VPOS retains data for specific periods based on business requirements, legal obligations, and user preferences.</p>
+
+    <h3>Retention Periods Table</h3>
+    <table class="retention-table">
+      <thead>
+        <tr>
+          <th>Data Type</th>
+          <th>Retention Period</th>
+          <th>Purpose</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Active Account Data</strong></td>
+          <td>Indefinite (while active)</td>
+          <td>Operational use</td>
+        </tr>
+        <tr>
+          <td><strong>Deactivated Account Data</strong></td>
+          <td>90 days</td>
+          <td>Allow reactivation period</td>
+        </tr>
+        <tr>
+          <td><strong>Scheduled Deletion Accounts</strong></td>
+          <td>15 days</td>
+          <td>Cancellation grace period</td>
+        </tr>
+        <tr>
+          <td><strong>Sales &amp; Billing Records</strong></td>
+          <td>Minimum 3 years</td>
+          <td>Tax compliance (Indian law)</td>
+        </tr>
+        <tr>
+          <td><strong>Product Images (when disabled)</strong></td>
+          <td>0-365 days (configurable)</td>
+          <td>Flexible cleanup</td>
+        </tr>
+        <tr>
+          <td><strong>Audit Logs</strong></td>
+          <td>90 days</td>
+          <td>Security monitoring</td>
+        </tr>
+        <tr>
+          <td><strong>Activity Logs</strong></td>
+          <td>90 days</td>
+          <td>System tracking</td>
+        </tr>
+        <tr>
+          <td><strong>Deleted User Backups</strong></td>
+          <td>90 days</td>
+          <td>Recovery and audit trail</td>
+        </tr>
+        <tr>
+          <td><strong>Customer Information</strong></td>
+          <td>Indefinite (shopkeeper managed)</td>
+          <td>Business operations</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Account Deletion Process</h3>
+    <p>When an account is scheduled for deletion:</p>
+    <ol>
+      <li><strong>15-day grace period:</strong> Account marked for deletion but remains active</li>
+      <li><strong>Cancellation option:</strong> Admin can cancel deletion during grace period</li>
+      <li><strong>Permanent deletion:</strong> After 15 days, account and all associated data permanently deleted</li>
+      <li><strong>Backup retention:</strong> Deleted user information backed up for 90 days for recovery and audit purposes</li>
+    </ol>
+
+    <h3>Custom Retention Periods</h3>
+    <div class="info-box">
+      <strong>Need Different Retention Periods?</strong> If your business requires custom retention periods (e.g., longer retention for auditing, shorter cleanup cycles), please contact our support team at <strong>support@vposindia.com</strong> or call <strong>090190 69884</strong>. We will work with you to configure appropriate settings.
+    </div>
+  </div>
+
+  <div class="card">
+    <h2><span class="icon">👤</span> Your Rights</h2>
+
+    <h3>Access Your Data</h3>
+    <p>You have the right to access your personal information stored in VPOS. Shopkeepers can view their data through the VPOS Admin application. For data export requests, contact our support team.</p>
+
+    <h3>Update Your Data</h3>
+    <p>Shopkeepers can update their profile information directly in the VPOS Admin application. Service agents can assist with updates if needed. Some fields (like customer type) may require admin approval.</p>
+
+    <h3>Delete Your Data</h3>
+    <p>You can request account deletion by contacting our support team. Deletion follows a 15-day grace period as described in our Terms & Conditions. Note that some data (like transaction records) must be retained for 3 years to comply with Indian tax laws.</p>
+
+    <h3>Export Your Data</h3>
+    <p>You can export your business data (inventory, sales reports, customer lists) directly from the VPOS Admin application. For comprehensive data exports, contact our support team.</p>
+
+    <h3>Withdraw Consent</h3>
+    <p>For data collected with consent (like customer information during billing), you can stop collection at any time. Previously collected data may be retained as required by law or business operations.</p>
+
+    <h3>Object to Processing</h3>
+    <p>If you believe your data is being processed incorrectly or without proper authorization, contact our support team to file a complaint.</p>
+  </div>
+
+  <div class="card">
     <h2><span class="icon">👶</span> Children's Privacy</h2>
-    <p>VPOS is a business application intended solely for use by adults operating commercial businesses. We do not knowingly collect information from anyone under the age of 18.</p>
+    <p>VPOS is a business application intended solely for use by adults operating commercial businesses. We do not knowingly collect information from anyone under the age of 18. If we become aware that a minor has provided personal information, we will take steps to delete such information promptly.</p>
+  </div>
+
+  <div class="card">
+    <h2><span class="icon">🔗</span> Third-Party Services</h2>
+    <p>VPOS uses the following third-party services:</p>
+
+    <h3>Google Firebase</h3>
+    <ul>
+      <li><strong>Purpose:</strong> Cloud database, storage, authentication, push notifications</li>
+      <li><strong>Data Shared:</strong> User account data, business data, device information</li>
+      <li><strong>Privacy Policy:</strong> <a href="https://firebase.google.com/support/privacy" target="_blank">firebase.google.com/support/privacy</a></li>
+    </ul>
+
+    <h3>Google Cloud Platform</h3>
+    <ul>
+      <li><strong>Purpose:</strong> Hosting backend services (Cloud Functions)</li>
+      <li><strong>Data Shared:</strong> API requests and responses</li>
+      <li><strong>Privacy Policy:</strong> <a href="https://cloud.google.com/terms/cloud-privacy-notice" target="_blank">cloud.google.com/terms/cloud-privacy-notice</a></li>
+    </ul>
+
+    <p>We do not share your data with any other third parties except as required by law or with your explicit consent.</p>
+  </div>
+
+  <div class="card">
+    <h2><span class="icon">🌐</span> International Data Transfers</h2>
+    <p>VPOS stores all data in the <strong>asia-south1 (Mumbai, India)</strong> region to ensure data sovereignty and compliance with Indian data localization requirements. Data is not transferred outside India except:</p>
+    <ul>
+      <li>For technical support purposes (with your consent)</li>
+      <li>As required by Indian law or court order</li>
+      <li>To Google Firebase/Cloud Platform infrastructure (which uses Google's secure global network)</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2><span class="icon">🔐</span> Data Breach Notification</h2>
+    <p>In the unlikely event of a data breach that affects your personal information:</p>
+    <ul>
+      <li>We will notify you within 72 hours of discovering the breach</li>
+      <li>Notification will include the nature of the breach, affected data types, and steps being taken</li>
+      <li>We will report the breach to relevant authorities as required by Indian law</li>
+      <li>We will take immediate steps to contain the breach and prevent further unauthorized access</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2><span class="icon">⚖️</span> Legal Compliance</h2>
+    <p>VPOS complies with applicable Indian data protection and privacy regulations:</p>
+    <ul>
+      <li><strong>IT Act, 2000:</strong> Information Technology Act and its amendments</li>
+      <li><strong>IT Rules, 2011:</strong> Information Technology (Reasonable Security Practices and Procedures and Sensitive Personal Data or Information) Rules</li>
+      <li><strong>Consumer Protection Act, 2019:</strong> Consumer data protection provisions</li>
+      <li><strong>GST Regulations:</strong> Transaction data retention for tax compliance</li>
+      <li><strong>Income Tax Act:</strong> 3-year minimum retention for business records</li>
+    </ul>
   </div>
 
   <div class="card">
     <h2><span class="icon">🔁</span> Changes to This Policy</h2>
-    <p>We may update this Privacy Policy from time to time. When we do, the "Last Updated" date at the top of this page will be revised. Continued use of the application after changes constitutes acceptance of the updated policy. For significant changes, we will notify account holders via email or in-app notification.</p>
+    <p>We may update this Privacy Policy from time to time. When we do, the "Last Updated" date at the top of this page will be revised. Continued use of the application after changes constitutes acceptance of the updated policy.</p>
+    <p>For significant changes, we will notify account holders via:</p>
+    <ul>
+      <li>Email to your registered email address</li>
+      <li>In-app notification upon next login</li>
+      <li>Prominent notice on the VPOS website</li>
+    </ul>
+    <p>We recommend reviewing this Privacy Policy periodically to stay informed of any changes.</p>
   </div>
 
   <div class="card">
     <h2><span class="icon">📬</span> Contact Us</h2>
-    <p>For any privacy-related questions, data requests, or concerns:</p>
+    <p>For any privacy-related questions, data requests, complaints, or concerns:</p>
     <div class="contact-box">
       <p><strong>Value Tech Solutions</strong></p>
+      <p><strong>Privacy Officer / Support Team</strong></p>
       <p>4th Floor, RJ Complex, SH 35, Varthur – Sarjapur Rd, Yamare Village, Sompura, Bengaluru, Karnataka 562125</p>
-      <p>📧 <a href="mailto:support@vposindia.com">support@vposindia.com</a></p>
-      <p>📞 <a href="tel:+919019069884">090190 69884</a></p>
+      <p>📧 Email: <a href="mailto:support@vposindia.com">support@vposindia.com</a></p>
+      <p>📞 Phone: <a href="tel:+919019069884">090190 69884</a></p>
+      <p>🌐 Website: <a href="https://vposindia.com" target="_blank">vposindia.com</a></p>
+      <p><strong>Support Hours:</strong> Monday - Saturday, 9:00 AM - 6:00 PM IST</p>
     </div>
+    <p style="margin-top: 16px;">We aim to respond to all privacy inquiries within 3 business days.</p>
   </div>
 
 </main>
-<footer>&copy; <span id="yr"></span> <strong>Value Tech Solutions</strong>. All rights reserved. &nbsp;|&nbsp; VPOS is a registered product of Value Tech Solutions.<script>document.getElementById('yr').textContent=new Date().getFullYear();</script></footer>
+
+<footer>
+  <p>&copy; <span id="yr"></span> <strong>Value Tech Solutions</strong>. All rights reserved.</p>
+  <p>VPOS™ is a registered trademark of Value Tech Solutions.</p>
+  <script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
+</footer>
+
 </body>
 </html>

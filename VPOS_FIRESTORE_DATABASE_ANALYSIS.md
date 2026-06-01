@@ -298,7 +298,7 @@ firestore (asia-south1)
 | `deleteBranchSubcollection` | `shopkeepers/{sid}/branches/{bid}`, `billing_devices/` (assignment check) | Soft delete: `branches/{bid}.isActive = false` | Delete with safety checks |
 | `getBranchDetails` | `shopkeepers/{sid}/branches/{bid}` | - | Single branch lookup |
 | `getBranchGstConfig` | `shopkeepers/{sid}/branches/{bid}` | - | GST configuration for billing |
-| `toggleBranchFloatingCustomers` | `shopkeepers/{sid}/branches/{bid}` | `shopkeepers/{sid}/branches/{bid}.floatingCustomers` | Enable/disable feature |
+| ~~`toggleBranchFloatingCustomers`~~ ✅ **DELETED** | - | - | ~~Enable/disable feature~~ Replaced by `toggleBranchFeature` |
 | `toggleBranchFeature` | `shopkeepers/{sid}/branches/{bid}` | `shopkeepers/{sid}/branches/{bid}` | Generic feature toggle |
 | `setPrimaryBranch` | `shopkeepers/{sid}/branches/` | `shopkeepers/{sid}/branches/{oldPrimary}.isPrimary = false`, `branches/{newPrimary}.isPrimary = true` | Set primary branch |
 
