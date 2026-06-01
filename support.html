@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Support – VPOS | Value Tech Solutions</title>
+  <script src="js/contact-config.js"></script>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f5f7fa; color: #1a1a2e; line-height: 1.75; }
@@ -57,17 +58,17 @@
       <div class="contact-card">
         <div class="big">📧</div>
         <strong>Email Support</strong>
-        <a href="mailto:support@vposindia.com">support@vposindia.com</a>
+        <a href="#" data-contact="email"></a>
         <p>Best for detailed queries, bug reports, and account issues</p>
       </div>
       <div class="contact-card">
         <div class="big">📞</div>
         <strong>Phone Support</strong>
-        <a href="tel:+919019069884">090190 69884</a>
+        <a href="#" data-contact="phone"></a>
         <p>Best for urgent device or billing issues</p>
       </div>
     </div>
-    <p style="margin-top:16px; font-size:0.88rem; color:#888;">Support hours: Monday – Saturday, 9:00 AM – 6:00 PM IST. We aim to respond to all email queries within 24 business hours.</p>
+    <p style="margin-top:16px; font-size:0.88rem; color:#888;">Support hours: <span data-contact="hours"></span>. We aim to respond to all email queries within 24 business hours.</p>
   </div>
 
   <div class="card">
@@ -160,16 +161,15 @@
   <div class="card">
     <h2><span class="icon">🏢</span> Visit Us</h2>
     <div class="highlight-box">
-      <strong>Value Tech Solutions</strong><br/>
-      4th Floor, RJ Complex, SH 35, Varthur – Sarjapur Rd,<br/>
-      Yamare Village, Sompura, Bengaluru, Karnataka 562125<br/>
+      <strong data-contact="company"></strong><br/>
+      <span id="address-formatted"></span><br/>
       <br/>
-      📧 <a href="mailto:support@vposindia.com" style="color:#0f3460;">support@vposindia.com</a><br/>
-      📞 <a href="tel:+919019069884" style="color:#0f3460;">090190 69884</a>
+      📧 <a href="#" data-contact="email" style="color:#0f3460;"></a><br/>
+      📞 <a href="#" data-contact="phone" style="color:#0f3460;"></a>
     </div>
   </div>
 
 </main>
-<footer>&copy; <span id="yr"></span> <strong>Value Tech Solutions</strong>. All rights reserved. &nbsp;|&nbsp; VPOS is a registered product of Value Tech Solutions.<script>document.getElementById('yr').textContent=new Date().getFullYear();</script></footer>
+<footer>&copy; <span id="yr"></span> <strong data-contact="company"></strong>. All rights reserved. &nbsp;|&nbsp; VPOS is a registered product of <span data-contact="company"></span>.<script>document.getElementById('yr').textContent=new Date().getFullYear();document.getElementById('address-formatted').innerHTML=VPOS_CONTACT.address.formatted;</script></footer>
 </body>
 </html>

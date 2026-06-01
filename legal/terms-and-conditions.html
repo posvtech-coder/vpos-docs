@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -27,15 +27,15 @@
     .contact-box p { color: rgba(255,255,255,0.92); margin-bottom: 6px; font-size: 0.93rem; }
     .contact-box a { color: #90caf9; text-decoration: none; }
     .contact-box a:hover { text-decoration: underline; }
-    .retention-table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 0.9rem; }
-    .retention-table th { background: #f0f4ff; color: #0f3460; padding: 12px; text-align: left; font-weight: 600; border: 1px solid #e0e7f5; }
-    .retention-table td { padding: 10px 12px; border: 1px solid #e0e7f5; }
-    .retention-table tr:nth-child(even) { background: #f9fafb; }
+    .retention-table, .features-table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 0.9rem; }
+    .retention-table th, .features-table th { background: #f0f4ff; color: #0f3460; padding: 12px; text-align: left; font-weight: 600; border: 1px solid #e0e7f5; }
+    .retention-table td, .features-table td { padding: 10px 12px; border: 1px solid #e0e7f5; }
+    .retention-table tr:nth-child(even), .features-table tr:nth-child(even) { background: #f9fafb; }
     footer { text-align: center; padding: 24px 20px; font-size: 0.82rem; color: #555; border-top: 1px solid #e4e8f0; background: #fff; }
     footer strong { color: #1a1a2e; }
     a.back { display: inline-block; margin: 24px 0 0 0; color: #0f3460; font-size: 0.9rem; text-decoration: none; font-weight: 500; }
     a.back:hover { text-decoration: underline; }
-    @media (max-width: 560px) { .card { padding: 24px 20px; } .retention-table { font-size: 0.85rem; } .retention-table th, .retention-table td { padding: 8px; } }
+    @media (max-width: 560px) { .card { padding: 24px 20px; } .retention-table, .features-table { font-size: 0.85rem; } .retention-table th, .retention-table td, .features-table th, .features-table td { padding: 8px; } }
   </style>
 </head>
 <body>
@@ -52,15 +52,15 @@
 
   <div class="card" style="margin-top:20px;">
     <h2><span class="icon">📋</span> Introduction</h2>
-    <p>These Terms and Conditions ("Terms") govern your use of the VPOS platform, including the VPOS Admin application, VPOS Billing application, and VPOS Billing Offline application (collectively, the "Service"), developed and operated by <strong>Value Tech Solutions</strong>, Bengaluru, Karnataka, India.</p>
-    <p>By accessing or using any VPOS application, you agree to be bound by these Terms. If you do not agree, you must not use the Service.</p>
+    <p>These Terms and Conditions ("Terms") govern your use of the VPOS platform, including the Admin, Billing, and Billing Offline applications (collectively, the "Service"), developed and operated by <strong>Value Tech Solutions</strong>, Bengaluru, Karnataka, India.</p>
+    <p>By using VPOS, you agree to these Terms. If you don't agree, please do not use the Service.</p>
     <p><strong>Last Updated:</strong> June 1, 2026</p>
   </div>
 
   <div class="card">
     <h2><span class="icon">🏢</span> About VPOS</h2>
-    <p>VPOS (Value Point of Sale) is a cloud-based point-of-sale management system designed for supermarkets and retail businesses in India. The platform enables shopkeepers to manage billing devices, branches, staff (managers), inventory, and sales transactions from a centralized interface.</p>
-    <p>VPOS is a product of <strong>Value Tech Solutions</strong>:</p>
+    <p>VPOS (Value Point of Sale) is a cloud-based and standalone point-of-sale management system for supermarkets and retail businesses in India. The platform helps you manage billing devices, branches, staff, inventory, and sales from one centralized system.</p>
+    <p><strong>Value Tech Solutions</strong> develops and operates VPOS:</p>
     <ul>
       <li><strong>Address:</strong> 4th Floor, RJ Complex, SH 35, Varthur – Sarjapur Rd, Yamare Village, Sompura, Bengaluru, Karnataka 562125</li>
       <li><strong>Phone:</strong> 090190 69884</li>
@@ -70,112 +70,232 @@
   </div>
 
   <div class="card">
-    <h2><span class="icon">👥</span> User Roles &amp; Access Levels</h2>
-    <p>VPOS operates with a role-based access control system. Each user role has specific permissions and capabilities:</p>
+    <h2><span class="icon">🔑</span> Account Registration &amp; Access Types</h2>
 
-    <h3>1. Admin (Platform Administrator)</h3>
-    <ul>
-      <li><strong>Full system access</strong> — manages billing devices, subscription plans, and all user accounts</li>
-      <li>Can create and manage shopkeeper accounts, service agents, and other admins</li>
-      <li>Can register and assign billing devices to branches</li>
-      <li>Can enable or disable user accounts</li>
-      <li>Can view reports and analytics across all shopkeepers</li>
-      <li>Access: VPOS Admin application only</li>
-    </ul>
-
-    <h3>2. Service Agent (Support Staff)</h3>
-    <ul>
-      <li><strong>Support and assistance role</strong> — helps shopkeepers with technical issues</li>
-      <li>Can create shopkeeper accounts (if granted permission by admin)</li>
-      <li>Can update shopkeeper profile information (excluding account status and customer type)</li>
-      <li>Can view shopkeeper data for support purposes</li>
-      <li>Cannot enable/disable accounts or change subscription plans</li>
-      <li>Access: VPOS Admin application only</li>
-    </ul>
-
-    <h3>3. Shopkeeper (Business Owner)</h3>
-    <ul>
-      <li><strong>Business management</strong> — manages their own business operations</li>
-      <li>Can create and manage branch locations</li>
-      <li>Can create and manage manager accounts for their branches</li>
-      <li>Can manage inventory, categories, and product images</li>
-      <li>Can view sales reports and transaction history</li>
-      <li>Can configure billing device settings and features</li>
-      <li>Access: VPOS Admin application (management) and VPOS Billing applications</li>
-    </ul>
-
-    <h3>4. Manager (Branch Manager)</h3>
-    <ul>
-      <li><strong>Branch-level operations</strong> — manages specific branch(es) assigned by shopkeeper</li>
-      <li>Can manage inventory for assigned branches</li>
-      <li>Can view sales reports for assigned branches</li>
-      <li>Can process billing transactions</li>
-      <li>Cannot create or delete branches</li>
-      <li>Cannot modify subscription or device settings</li>
-      <li>Access: VPOS Admin application (branch view) and VPOS Billing applications</li>
-    </ul>
-  </div>
-
-  <div class="card">
-    <h2><span class="icon">🔑</span> Account Access &amp; Eligibility</h2>
+    <h3>Trial Account (Self-Registration)</h3>
     <div class="highlight-box">
-      <strong>No Public Registration:</strong> VPOS does not offer public self-registration. All accounts are created exclusively by the Value Tech Solutions team or authorized admins following a business onboarding process.
+      <strong>Try VPOS Free:</strong> You can register for a trial account using your mobile number and explore VPOS with limited features. Once approved by our team, you can upgrade to a full subscription plan.
     </div>
+    
+    <h3>Trial Account Limits</h3>
+    <table class="features-table">
+      <thead>
+        <tr>
+          <th>Feature</th>
+          <th>Trial Account Limit</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Branches</td>
+          <td>1 branch maximum</td>
+        </tr>
+        <tr>
+          <td>Product Categories</td>
+          <td>3 categories maximum</td>
+        </tr>
+        <tr>
+          <td>Inventory Items</td>
+          <td>20 items maximum</td>
+        </tr>
+        <tr>
+          <td>Managers</td>
+          <td>0 (Cannot create managers)</td>
+        </tr>
+        <tr>
+          <td>Billing Devices</td>
+          <td>No billing devices provided in trial</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Full Subscription Account</h3>
+    <p>When onboarded by our team or when your trial is approved and upgraded, you get full access based on your chosen subscription plan. Limits are determined by your subscription tier.</p>
+
+    <h3>Account Requirements</h3>
     <ul>
-      <li>You must be at least 18 years of age and operate a legitimate registered business to use VPOS</li>
-      <li>You are responsible for maintaining the confidentiality of your login credentials</li>
-      <li>You must not share your credentials with unauthorized persons</li>
-      <li>Shopkeepers may create manager accounts and assign them to branches. Shopkeepers are fully responsible for the actions of their managers within the platform</li>
-      <li>Value Tech Solutions reserves the right to suspend or terminate any account that violates these Terms</li>
+      <li>You must be at least 18 years old and operate a legitimate business</li>
+      <li>Keep your login credentials confidential</li>
+      <li>Do not share your credentials with unauthorized people</li>
+      <li>You can create manager accounts (if your plan allows it)</li>
+      <li>You are responsible for the actions of managers and staff you create</li>
+      <li>We can suspend or terminate accounts that violate these Terms</li>
     </ul>
   </div>
 
   <div class="card">
-    <h2><span class="icon">🏪</span> Shopkeeper Responsibilities</h2>
+    <h2><span class="icon">🏪</span> Managing Your Business</h2>
+
+    <h3>Creating Branches</h3>
     <ul>
-      <li>Shopkeepers are responsible for the accurate setup and management of their branches, inventory, and billing devices</li>
-      <li>Shopkeepers may create multiple branches, subject to the branch limit set by Value Tech Solutions based on their subscription plan</li>
-      <li>Shopkeepers must ensure that customer data collected during billing is done only with the explicit consent of the customer. Value Tech Solutions does not mandate customer data collection and bears no liability for any unauthorized collection</li>
-      <li>Shopkeepers are solely responsible for their refund, exchange, and return policies with their end customers. Value Tech Solutions has no involvement in shopkeeper-to-customer financial transactions</li>
-      <li>Shopkeepers must comply with all applicable Indian laws including GST regulations, data protection laws, and consumer protection laws</li>
+      <li>You can create branch locations within your subscription limits</li>
+      <li>Trial accounts can create only 1 branch</li>
+      <li>Full subscription accounts can create multiple branches based on their plan</li>
+      <li>Each branch requires complete address and GST information</li>
+    </ul>
+
+    <h3>Creating Manager Accounts</h3>
+    <ul>
+      <li>Managers can be created only in full subscription accounts (not in trial)</li>
+      <li>You assign managers to specific branches</li>
+      <li>Managers can access only their assigned branches</li>
+      <li>Managers can manage inventory and process billing for their branches</li>
+      <li>You are responsible for all managers you create</li>
+    </ul>
+
+    <h3>Creating Staff Members</h3>
+    <ul>
+      <li>You and your managers (if any) can create staff accounts</li>
+      <li>Staff members operate billing devices to process transactions</li>
+      <li>You are responsible for all staff accounts created under your business</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2><span class="icon">📱</span> Billing Devices</h2>
+
+    <h3>Device Provisioning</h3>
+    <div class="highlight-box">
+      <strong>Important:</strong> Billing devices are provided by Value Tech Solutions only. You cannot purchase or use your own devices. Our team will provision and assign billing devices to your branches based on your subscription plan and requirements.
+    </div>
+
+    <h3>How Billing Devices Work</h3>
+    <ul>
+      <li>Contact our support team to request billing devices for your branches</li>
+      <li>Our team will assign approved devices to your specific branches</li>
+      <li>Devices are pre-configured and ready for billing operations</li>
+      <li>Each device is linked to a specific branch in your account</li>
+      <li>Transactions from devices automatically sync to your branch data (cloud-connected mode)</li>
+      <li>Devices can operate offline and sync when internet is available</li>
+    </ul>
+
+    <h3>Device Modes</h3>
+    
+    <p><strong>Cloud-Connected Mode (VPOS Billing):</strong></p>
+    <ul>
+      <li>Devices sync data to secure cloud servers</li>
+      <li>Real-time inventory updates across all devices</li>
+      <li>Centralized reporting and analytics</li>
+      <li>Manager and multi-branch support</li>
+      <li>Access data from anywhere via Admin application</li>
+    </ul>
+
+    <p><strong>Standalone Mode (VPOS Billing Offline):</strong></p>
+    <ul>
+      <li>Devices do NOT connect to cloud servers</li>
+      <li>All data stays on your local devices and network</li>
+      <li>Devices communicate with each other via local network</li>
+      <li>No manager accounts (branch-level only)</li>
+      <li>You are responsible for data backup and security</li>
+      <li>Ideal for businesses preferring complete data privacy</li>
+    </ul>
+
+    <h3>Device Responsibilities</h3>
+    <ul>
+      <li>The software on billing devices is licensed, not sold</li>
+      <li>Do not modify, reverse-engineer, or redistribute the device software</li>
+      <li>You are responsible for physical device damage, loss, or malfunction</li>
+      <li>We provide software support and updates only</li>
+      <li>Device repairs or replacements may incur additional charges</li>
     </ul>
   </div>
 
   <div class="card">
     <h2><span class="icon">💳</span> Subscription &amp; Payment</h2>
-    <p>VPOS is a paid subscription service. Pricing and plan details are communicated during the onboarding process by our support team.</p>
+    <p>VPOS is a paid subscription service (trial accounts are free with limited features).</p>
 
-    <h3>Subscription Terms</h3>
+    <h3>Trial Account</h3>
     <ul>
-      <li>Subscriptions are billed as agreed during onboarding (monthly or annually)</li>
-      <li>Invoices and payment instructions are provided by the Value Tech Solutions support team</li>
-      <li>Access to certain administrative features may be restricted upon subscription expiry; however, physical VPOS billing devices will continue to operate in offline mode to prevent disruption to billing operations</li>
-      <li>Subscription plan upgrades or downgrades can be requested by contacting our support team</li>
+      <li>Free to use with feature limits</li>
+      <li>No billing devices provided</li>
+      <li>Can be upgraded to full subscription after approval</li>
+    </ul>
+
+    <h3>Full Subscription Terms</h3>
+    <ul>
+      <li>Pricing and plan details provided during onboarding by our support team</li>
+      <li>Billing is monthly or annual as agreed</li>
+      <li>Invoices and payment instructions provided by support team</li>
+      <li>Billing device allocation based on your subscription tier</li>
+      <li>Features enabled based on your plan (inventory images, email services, retention periods, etc.)</li>
+      <li>Subscription renewal required for continued access to full features</li>
+      <li>Billing devices continue working offline even if subscription expires</li>
+    </ul>
+
+    <h3>Subscription Features</h3>
+    <p>Different subscription plans include different features:</p>
+    <ul>
+      <li><strong>Branch Limits:</strong> Number of branches you can create</li>
+      <li><strong>Manager Accounts:</strong> Number of managers you can assign</li>
+      <li><strong>Billing Devices:</strong> Number of devices provided and supported</li>
+      <li><strong>Inventory Limits:</strong> Number of categories and products</li>
+      <li><strong>Product Images:</strong> Enable or disable product photos</li>
+      <li><strong>Image Retention:</strong> How long product images are kept after deletion (0-90 days)</li>
+      <li><strong>Email Services:</strong> Automated email notifications and reports</li>
+      <li><strong>Offline Tracking:</strong> Advanced offline sync and tracking features</li>
+      <li><strong>Data Retention:</strong> Custom retention periods for various data types</li>
+      <li><strong>Customer Database:</strong> Optional customer information storage</li>
     </ul>
 
     <h3>Refund Policy</h3>
     <div class="warning-box">
-      <strong>No Refunds:</strong> All VPOS subscription fees are non-refundable. Upon account creation, a dedicated cloud environment is provisioned exclusively for your business. The cost of provisioning this infrastructure is incurred immediately and cannot be recovered. By accepting these Terms, you acknowledge and agree to this no-refund policy.
+      <strong>No Refunds:</strong> All subscription fees are non-refundable. When you subscribe, we provision dedicated infrastructure, assign billing devices, and configure your account. These costs cannot be recovered. By subscribing to VPOS, you agree to this no-refund policy.
     </div>
-    <p>Disputes regarding charges must be raised within 7 days of the invoice date by contacting <strong>support@vposindia.com</strong>.</p>
+    <p>Billing disputes must be raised within 7 days by contacting <strong>support@vposindia.com</strong>.</p>
+
+    <h3>Subscription Changes</h3>
+    <ul>
+      <li>Contact support to upgrade, downgrade, or extend your subscription</li>
+      <li>Plan changes take effect at the next billing cycle</li>
+      <li>Downgrades may result in feature restrictions and device deactivation</li>
+      <li>Billing device allocation may change based on new plan limits</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2><span class="icon">🏪</span> Your Responsibilities</h2>
+    <ul>
+      <li>Accurately set up and manage your branches, inventory, and account information</li>
+      <li>Stay within your subscription plan limits (branches, categories, items, managers)</li>
+      <li>Collect customer data only with explicit customer consent. Value Tech Solutions is not responsible for unauthorized data collection</li>
+      <li>Handle your own refunds, exchanges, and returns with customers. We are not involved in customer transactions</li>
+      <li>Comply with all Indian laws including GST, data protection, and consumer protection</li>
+      <li>Ensure your managers and staff follow all applicable laws and regulations</li>
+      <li>Keep your account information and business details up to date</li>
+      <li>Properly secure and maintain billing devices assigned to you</li>
+      <li>In standalone mode, maintain your own data backups</li>
+      <li>Report any device issues or malfunctions to our support team immediately</li>
+    </ul>
   </div>
 
   <div class="card">
     <h2><span class="icon">🗑️</span> Account Deactivation &amp; Data Retention</h2>
-    <p>VPOS has clear policies for account deactivation and data retention to protect your business data while maintaining system integrity.</p>
+
+    <h3>Trial Account Expiry</h3>
+    <p>Trial accounts that are not upgraded within a reasonable period may be deactivated. Contact support to retain your trial data or upgrade to a full subscription.</p>
+
+    <h3>Subscription Expiry</h3>
+    <ul>
+      <li>When your subscription expires, some features may be restricted</li>
+      <li>You can still access billing devices in offline mode</li>
+      <li>Cloud data access may be limited until subscription renewal</li>
+      <li>Renew your subscription to restore full access</li>
+    </ul>
 
     <h3>Account Deactivation</h3>
     <div class="highlight-box">
-      Accounts can be temporarily deactivated by admins. Deactivated accounts retain all data but cannot access the system.
+      If your account is deactivated, all your data is retained for 90 days but you cannot access the system. Contact our support team at <strong>support@vposindia.com</strong> to reactivate.
     </div>
 
-    <h3>Account Deletion (Scheduled)</h3>
-    <p>When an admin schedules an account for deletion:</p>
+    <h3>Account Deletion</h3>
+    <p>If your account is scheduled for deletion:</p>
     <ul>
-      <li><strong>15-day retention period:</strong> The account is marked for deletion but remains active with all data intact</li>
-      <li>During this period, admins can cancel the scheduled deletion if needed</li>
-      <li>After 15 days, the account is permanently deleted along with all associated data</li>
-      <li>This applies to shopkeeper accounts, service agents, and manager accounts</li>
+      <li><strong>15-day grace period:</strong> Your account remains active with all data</li>
+      <li>During this time, you can contact support to cancel the deletion</li>
+      <li>After 15 days, the account and all cloud data are permanently deleted</li>
+      <li>This also applies to manager accounts you created</li>
+      <li>Billing devices assigned to you will be deactivated and reclaimed</li>
+      <li>Standalone mode devices retain local data (not deleted by us)</li>
     </ul>
 
     <h3>Data Retention Periods</h3>
@@ -183,108 +303,77 @@
       <thead>
         <tr>
           <th>Data Type</th>
-          <th>Retention Period</th>
-          <th>Purpose</th>
+          <th>How Long</th>
+          <th>Why</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td><strong>Active Account Data</strong></td>
+          <td>Active Account Data</td>
           <td>Indefinite (while active)</td>
-          <td>Operational use</td>
+          <td>To provide services</td>
         </tr>
         <tr>
-          <td><strong>Deactivated Account Data</strong></td>
+          <td>Inactive/Deactivated Accounts</td>
           <td>90 days</td>
-          <td>Allow reactivation period</td>
+          <td>Allow reactivation</td>
         </tr>
         <tr>
-          <td><strong>Scheduled Deletion Accounts</strong></td>
+          <td>Scheduled Deletions</td>
           <td>15 days</td>
-          <td>Cancellation grace period</td>
+          <td>Allow cancellation</td>
         </tr>
         <tr>
-          <td><strong>Sales &amp; Billing Records</strong></td>
-          <td>Minimum 6 years</td>
-          <td>Tax compliance (GST Act 2017 & Income Tax Act 1961)</td>
+          <td>Sales &amp; Billing Records</td>
+          <td>Minimum 7 years</td>
+          <td>Indian tax law compliance</td>
         </tr>
         <tr>
-          <td><strong>Product Images (when disabled)</strong></td>
-          <td>0-365 days (configurable)</td>
-          <td>Flexible cleanup</td>
+          <td>Product Images (when disabled)</td>
+          <td>Based on subscription plan (0-90 days)</td>
+          <td>Configurable retention</td>
         </tr>
         <tr>
-          <td><strong>Audit Logs</strong></td>
+          <td>System Logs</td>
           <td>90 days</td>
-          <td>Security monitoring</td>
+          <td>Troubleshooting and security</td>
         </tr>
         <tr>
-          <td><strong>Activity Logs</strong></td>
-          <td>90 days</td>
-          <td>System tracking</td>
-        </tr>
-        <tr>
-          <td><strong>Deleted User Backups</strong></td>
-          <td>90 days</td>
-          <td>Recovery and audit trail</td>
+          <td>Device Assignment History</td>
+          <td>Duration of subscription + 90 days</td>
+          <td>Support and tracking</td>
         </tr>
       </tbody>
     </table>
 
-    <h3>Inventory Image Deletion</h3>
-    <p>When shopkeepers disable product images for a branch:</p>
-    <ul>
-      <li>Admins/Service agents can schedule deletion with a configurable delay (0-365 days)</li>
-      <li>During the delay period, images are retained and can be restored by re-enabling the feature</li>
-      <li>After the scheduled date, images are permanently deleted by an automated system task</li>
-      <li>This feature provides flexibility for temporary disablement without immediate data loss</li>
-    </ul>
-
-    <h3>Transaction Cleanup</h3>
-    <p>Old transaction records may be archived or deleted based on retention policies:</p>
-    <ul>
-      <li>Minimum 3-year retention for tax compliance</li>
-      <li>Transactions older than the retention period may be archived or deleted</li>
-      <li>Automated cleanup tasks run daily to maintain system performance</li>
-    </ul>
-
     <div class="info-box">
-      <strong>Need Changes to Retention Periods?</strong> If you require custom retention periods for your business (for example, longer retention for auditing purposes or shorter cleanup cycles), please contact our support team at <strong>support@vposindia.com</strong> or call <strong>090190 69884</strong>. We will work with you to configure appropriate retention settings.
+      <strong>Custom Retention:</strong> Some subscription plans offer custom retention periods for specific data types. Contact <strong>support@vposindia.com</strong> or call <strong>090190 69884</strong> for details about your plan.
     </div>
   </div>
 
   <div class="card">
-    <h2><span class="icon">📦</span> Hardware Devices</h2>
+    <h2><span class="icon">🚫</span> Prohibited Activities</h2>
+    <p>You must not:</p>
     <ul>
-      <li>VPOS Billing runs on custom Android-based hardware billing devices supplied or approved by Value Tech Solutions</li>
-      <li>The software installed on billing devices is proprietary and licensed, not sold</li>
-      <li>Customers must not attempt to modify, reverse-engineer, or redistribute the billing device software</li>
-      <li>Physical hardware damage, loss, or malfunction is the responsibility of the shopkeeper. Value Tech Solutions provides software support only</li>
-      <li>Device registration, assignment, and activation are managed through the VPOS Admin portal</li>
-      <li>Billing devices can operate in offline mode to ensure business continuity during internet outages</li>
+      <li>Use VPOS for illegal purposes or in violation of Indian laws</li>
+      <li>Attempt unauthorized access to other accounts, systems, or billing devices</li>
+      <li>Disrupt or interfere with the Service or billing devices</li>
+      <li>Reverse-engineer, decompile, or modify the software or billing devices</li>
+      <li>Store or transmit malicious code or viruses</li>
+      <li>Resell or commercially exploit the Service without written permission</li>
+      <li>Share login credentials with unauthorized people</li>
+      <li>Exceed your subscription plan limits</li>
+      <li>Use trial accounts for commercial operations (trial is for evaluation only)</li>
+      <li>Transfer billing devices to other businesses without authorization</li>
+      <li>Tamper with or modify billing device hardware or software</li>
     </ul>
   </div>
 
   <div class="card">
-    <h2><span class="icon">🚫</span> Prohibited Use</h2>
-    <p>You agree not to:</p>
-    <ul>
-      <li>Use VPOS for any unlawful purpose or in violation of any applicable Indian laws</li>
-      <li>Attempt to gain unauthorized access to other accounts, systems, or networks</li>
-      <li>Interfere with or disrupt the integrity or performance of the Service</li>
-      <li>Reverse-engineer, decompile, or disassemble any part of the application</li>
-      <li>Use the Service to store or transmit malicious code, viruses, or harmful software</li>
-      <li>Resell, sublicense, or commercially exploit the Service without written permission from Value Tech Solutions</li>
-      <li>Share or distribute your login credentials with unauthorized third parties</li>
-      <li>Collect or harvest any information from the Service for unauthorized purposes</li>
-    </ul>
-  </div>
-
-  <div class="card">
-    <h2><span class="icon">©️</span> Intellectual Property &amp; Copyright</h2>
+    <h2><span class="icon">©️</span> Copyright &amp; Intellectual Property</h2>
     
     <h3>Ownership</h3>
-    <p>VPOS, including all its applications, software, design, trademarks, logos, documentation, and source code, is the exclusive intellectual property of <strong>Value Tech Solutions</strong>.</p>
+    <p>VPOS, including all applications, software, billing devices, designs, trademarks, logos, and documentation, is the exclusive property of <strong>Value Tech Solutions</strong>.</p>
     
     <div class="highlight-box">
       <strong>© 2024-2026 Value Tech Solutions. All Rights Reserved.</strong><br>
@@ -292,97 +381,91 @@
     </div>
 
     <h3>Restrictions</h3>
-    <p>No part of the VPOS platform may be:</p>
+    <p>Without written permission, you cannot:</p>
     <ul>
-      <li>Copied, reproduced, or duplicated</li>
-      <li>Distributed, republished, or resold</li>
-      <li>Modified, adapted, or translated</li>
-      <li>Decompiled, reverse-engineered, or disassembled</li>
-      <li>Used to create derivative works</li>
-      <li>Used for competitive analysis or benchmarking</li>
+      <li>Copy, reproduce, or duplicate VPOS or billing device software</li>
+      <li>Distribute, republish, or resell the Service</li>
+      <li>Modify, adapt, or translate the software</li>
+      <li>Decompile or reverse-engineer applications or billing devices</li>
+      <li>Create derivative works</li>
+      <li>Use VPOS for competitive analysis or benchmarking</li>
     </ul>
-    <p>Without the prior written consent of Value Tech Solutions.</p>
 
-    <h3>License Grant</h3>
-    <p>Subject to your compliance with these Terms, Value Tech Solutions grants you a limited, non-exclusive, non-transferable, revocable license to access and use the VPOS platform solely for your internal business operations.</p>
+    <h3>License</h3>
+    <p>We grant you a limited, non-exclusive, non-transferable, revocable license to use VPOS and assigned billing devices solely for your internal business operations during your subscription period.</p>
 
-    <h3>User-Generated Content</h3>
-    <p>You retain ownership of:</p>
+    <h3>Your Content</h3>
+    <p>You own:</p>
     <ul>
-      <li>Your business data (product information, prices, categories)</li>
+      <li>Your business data (products, prices, categories)</li>
       <li>Sales transaction records</li>
-      <li>Customer information (collected with proper consent)</li>
-      <li>Product images and photos uploaded by you</li>
+      <li>Customer information (collected properly with consent)</li>
+      <li>Product images and photos you upload</li>
     </ul>
-    <p>However, by using VPOS, you grant Value Tech Solutions a license to store, process, and transmit your content as necessary to provide the Service.</p>
-
-    <h3>Copyright Infringement</h3>
-    <p>If you believe your intellectual property rights have been infringed, please contact us immediately:</p>
-    <ul>
-      <li>Email: <strong>support@vposindia.com</strong></li>
-      <li>Phone: <strong>090190 69884</strong></li>
-      <li>Include: Description of the copyrighted work, evidence of ownership, and details of the alleged infringement</li>
-    </ul>
+    <p>By using VPOS, you allow us to store and process your content to provide the Service.</p>
   </div>
 
   <div class="card">
     <h2><span class="icon">⚠️</span> Limitation of Liability</h2>
-    <p>Value Tech Solutions provides the VPOS platform on an "as is" and "as available" basis. To the fullest extent permitted by Indian law:</p>
+    <p>VPOS is provided "as is" and "as available". To the extent permitted by law:</p>
     <ul>
-      <li>Value Tech Solutions is not liable for any loss of business, loss of revenue, loss of data, or indirect or consequential damages arising from use of or inability to use the Service</li>
-      <li>Value Tech Solutions is not responsible for any financial transactions, pricing errors, or billing disputes between shopkeepers and their customers</li>
-      <li>In no event shall Value Tech Solutions' total liability to you exceed the subscription fees paid by you in the three (3) months preceding the claim</li>
-      <li>Value Tech Solutions does not guarantee uninterrupted or error-free operation of the Service</li>
-      <li>You are responsible for maintaining adequate backup of your business data</li>
+      <li>We are not liable for loss of business, revenue, data, or indirect damages</li>
+      <li>We are not responsible for transactions, pricing errors, or disputes between you and your customers</li>
+      <li>Our maximum liability is limited to the subscription fees you paid in the past 3 months</li>
+      <li>We don't guarantee uninterrupted or error-free service</li>
+      <li>You are responsible for backing up your data (especially in standalone mode)</li>
+      <li>We are not liable for billing device hardware failures, theft, or physical damage</li>
+      <li>Feature availability may vary based on your subscription plan</li>
     </ul>
 
     <h3>Force Majeure</h3>
-    <p>Value Tech Solutions shall not be liable for any failure or delay in performance due to circumstances beyond our reasonable control, including but not limited to acts of God, natural disasters, government actions, internet or cloud service provider outages, or cyber attacks.</p>
+    <p>We are not liable for delays or failures due to circumstances beyond our control, including natural disasters, government actions, internet outages, or cyber attacks.</p>
   </div>
 
   <div class="card">
-    <h2><span class="icon">🔄</span> Modifications to the Service &amp; Terms</h2>
+    <h2><span class="icon">🔄</span> Changes to Service &amp; Terms</h2>
     <ul>
-      <li>Value Tech Solutions reserves the right to modify, suspend, or discontinue any part of the Service at any time with reasonable advance notice</li>
-      <li>These Terms may be updated from time to time. The "Last Updated" date at the top indicates when changes were last made</li>
-      <li>Continued use of the Service after changes constitutes acceptance of the updated Terms</li>
-      <li>Material changes will be communicated via email to your registered email address or through in-app notifications</li>
-      <li>We recommend reviewing these Terms periodically to stay informed of any changes</li>
+      <li>We may modify, suspend, or discontinue parts of the Service with advance notice</li>
+      <li>Subscription plans, features, and pricing may change with notice</li>
+      <li>These Terms may be updated. The "Last Updated" date shows when changes were made</li>
+      <li>Continued use after changes means you accept the updated Terms</li>
+      <li>Major changes will be notified via email (if enabled) or in-app</li>
+      <li>Please review these Terms periodically</li>
     </ul>
   </div>
 
   <div class="card">
-    <h2><span class="icon">⚖️</span> Governing Law &amp; Dispute Resolution</h2>
+    <h2><span class="icon">⚖️</span> Governing Law &amp; Disputes</h2>
     
     <h3>Applicable Law</h3>
-    <p>These Terms are governed by and construed in accordance with the laws of <strong>India</strong>. Any disputes arising from or related to these Terms or the use of VPOS shall be subject to the exclusive jurisdiction of the courts located in <strong>Bengaluru, Karnataka, India</strong>.</p>
+    <p>These Terms are governed by the laws of <strong>India</strong>. Disputes are subject to the exclusive jurisdiction of courts in <strong>Bengaluru, Karnataka, India</strong>.</p>
 
-    <h3>Dispute Resolution Process</h3>
+    <h3>Dispute Resolution</h3>
     <ol>
-      <li><strong>Good-Faith Negotiation (30 days):</strong> Before initiating any legal proceedings, the parties agree to attempt to resolve disputes through good-faith negotiation for a period of 30 days</li>
-      <li><strong>Mediation:</strong> If negotiation fails, the parties may agree to engage in mediation with a mutually acceptable mediator</li>
-      <li><strong>Arbitration or Litigation:</strong> If mediation is unsuccessful, disputes may be resolved through arbitration or litigation in Bengaluru, Karnataka</li>
+      <li><strong>Negotiation (30 days):</strong> First try to resolve through good-faith negotiation with our support team</li>
+      <li><strong>Mediation:</strong> If negotiation fails, try mediation with a mutually acceptable mediator</li>
+      <li><strong>Arbitration or Litigation:</strong> If mediation fails, disputes may go to arbitration or court in Bengaluru</li>
     </ol>
 
-    <h3>Limitation Period</h3>
-    <p>Any claim or cause of action arising from use of the Service must be filed within one (1) year from the date the cause of action arose, or it shall be permanently barred.</p>
+    <h3>Time Limit</h3>
+    <p>Claims must be filed within one (1) year from when the issue arose, or they are permanently barred.</p>
   </div>
 
   <div class="card">
-    <h2><span class="icon">🌐</span> Compliance with Indian Laws</h2>
-    <p>VPOS is designed to comply with applicable Indian regulations:</p>
+    <h2><span class="icon">🇮🇳</span> Indian Law Compliance</h2>
+    <p>VPOS complies with Indian regulations:</p>
     <ul>
-      <li><strong>GST Compliance:</strong> Billing features support GST-compliant invoicing and reporting</li>
-      <li><strong>Data Protection:</strong> User data is stored securely on Google Cloud Platform (Firebase) with data centers in India (asia-south1 region)</li>
-      <li><strong>Consumer Protection:</strong> Shopkeepers are responsible for compliance with the Consumer Protection Act, 2019</li>
-      <li><strong>Income Tax Records:</strong> Transaction records are retained for a minimum of 3 years as required by Indian tax laws</li>
-      <li><strong>IT Act, 2000:</strong> We comply with applicable provisions of the Information Technology Act, 2000 and its amendments</li>
+      <li><strong>GST Compliance:</strong> Billing supports GST-compliant invoicing and reporting</li>
+      <li><strong>Data Protection:</strong> Cloud data stored securely in India (standalone mode data stays local)</li>
+      <li><strong>Consumer Protection:</strong> You must comply with Consumer Protection Act, 2019</li>
+      <li><strong>Tax Records:</strong> Transaction records retained for minimum 7 years as per Indian law</li>
+      <li><strong>IT Act, 2000:</strong> Complies with Information Technology Act and amendments</li>
     </ul>
   </div>
 
   <div class="card">
     <h2><span class="icon">📬</span> Contact &amp; Support</h2>
-    <p>For questions regarding these Terms, technical support, or any other inquiries:</p>
+    <p>For questions, support, device requests, or assistance:</p>
     <div class="contact-box">
       <p><strong>Value Tech Solutions</strong></p>
       <p>4th Floor, RJ Complex, SH 35, Varthur – Sarjapur Rd, Yamare Village, Sompura, Bengaluru, Karnataka 562125</p>
@@ -396,9 +479,9 @@
 </main>
 
 <footer>
-  <p>&copy; <span id="yr"></span> <strong>Value Tech Solutions</strong>. All rights reserved.</p>
+  <p>&copy; 2024-2026 <strong>Value Tech Solutions</strong>. All rights reserved.</p>
   <p>VPOS™ is a registered trademark of Value Tech Solutions.</p>
-  <script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
+  <p style="margin-top: 8px; font-size: 0.78rem; color: #888;">Last updated: June 1, 2026</p>
 </footer>
 
 </body>
