@@ -313,12 +313,11 @@
     <h2><span class="icon">🌐</span> Third-Party Services</h2>
     <p>VPOS uses trusted third-party services:</p>
     <ul>
-      <li><strong>Cloud Services:</strong> For secure data storage and backup (cloud-connected mode only)</li>
-      <li><strong>SMS Services:</strong> For OTP delivery during login</li>
-      <li><strong>Email Services:</strong> For subscription notifications and support (if enabled in your plan)</li>
-      <li><strong>Payment Services:</strong> For secure subscription payment processing</li>
+      <li><strong>Cloud Services:</strong> For secure data storage and backup (cloud-connected mode only) — Google Cloud Platform (India region)</li>
+      <li><strong>SMS Services:</strong> For OTP delivery during login — MSG91 (India)</li>
+      <li><strong>Email Services:</strong> For automated sales reports and support communications (if enabled in your plan) — MSG91 (India)</li>
     </ul>
-    <p>All partners comply with Indian data protection laws and maintain high security standards.</p>
+    <p>All service providers are based in India or use Indian data centers, complying with data localization requirements and Indian data protection laws.</p>
   </div>
 
   <div class="card">
